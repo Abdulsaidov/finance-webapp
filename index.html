@@ -301,11 +301,13 @@
         <button id="operation"> Добавить операцию</button>
     </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script type="text/javascript">
+    <script>
         let tg = window.Telegram.WebApp;
         let add = document.getElementById("add");
         let operation = document.getElementById("operation");
+        tg.ready();
         tg.expand();
+
         add.addEventListener('click',()=>{
                 document.getElementById("parag").value = tg.initDataUnsafe.user.first_name;
         })
