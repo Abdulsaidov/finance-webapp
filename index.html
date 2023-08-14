@@ -294,7 +294,7 @@
     <div id="main">
         <h1> Внесите операцию</h1>
         <button id="add"> Добавить </button>
-        <p id="parag"></p>
+        <input id="parag"></p>
     </div>
     <form id = "form">
         <input type="number" placeholder="Сумма" id="Amount">
@@ -305,8 +305,9 @@
         let tg = window.Telegram.WebApp;
         let add = document.getElementById("add");
         let operation = document.getElementById("operation");
+        tg.expand();
         add.addEventListener('click',()=>{
-                document.getElementById("parag").nodeValue = tg.initDataUnsafe.user.first_name;
+                document.getElementById("parag").value = tg.initDataUnsafe.user.first_name;
         })
     </script>
 </body>
